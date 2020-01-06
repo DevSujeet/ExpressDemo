@@ -43,7 +43,7 @@ if (app.get('env') === 'development') {
 
 dbDebugger('connected to databse')
 
-//custom middle ware
+//custom middleware
 app.use(logger);
 app.use(authenticator);
 //NOTE:- middle ware functions are called in sequence. (word is pipeline.)
@@ -52,7 +52,7 @@ app.use(authenticator);
 //-------------------- CONFIGURATION --------------------------------
 startupDebugger('Application name = ' + config.get('name')) //name of the config property
 startupDebugger('mail server = ' + config.get('mail.host'))
-startupDebugger('mail password = ' + config.get('mail.password'))
+startupDebugger('mail password = ' + config.get('mail.password'))   //remeber to export the secret in terminal// export app_password=1234
 
 //-------------------- -------------------- -------------------- 
 // Declare local courses.
